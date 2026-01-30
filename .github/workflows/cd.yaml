@@ -75,5 +75,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ github.actor }}/b3-g2-cicd:latest
-            ghcr.io/${{ github.actor }}/b3-g2-cicd:v$(node -p "require('./package.json').version")
+            ghcr.io/${{ github.repository }}:latest
+            ghcr.io/${{ github.repository }}:v$(node -p "require('./package.json').version")
