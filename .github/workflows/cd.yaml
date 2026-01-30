@@ -1,3 +1,8 @@
+permissions:
+  contents: write
+  packages: write
+
+
 name: CD Pipeline
 
 on:
@@ -50,7 +55,7 @@ jobs:
 
       - name: Push commit and tags
         run: |
-          git remote set-url origin https://x-access-token:${{ secrets.CR_PAT }}@github.com/${{ github.repository }}.git
+          origin https://x-access-token:${{ secrets.CR_PAT }}@github.com/${{ github.repository }}.git
           git push origin main
           git push origin --tags
 
